@@ -1,4 +1,3 @@
-# собрано с помощью  python -m eel gui.py web --onefile --noconsol --i "C:\Users\arkas\study\Sem7\Quantum mechanics\icon.ico"
 import eel
 from solver import TISE
 
