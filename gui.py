@@ -4,6 +4,7 @@ from solver import TISE
 
 
 eel.init('web')
+
 @eel.expose
 def run(params):
     try:
