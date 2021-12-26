@@ -17,7 +17,7 @@ Quick start guide:
 1. Fill all fields like in the picture:
 ![image](https://user-images.githubusercontent.com/48184708/147402849-544cb7d5-b982-41f8-8a0f-a252c24ef637.png)
 2. Press "Calculate" button.
-3. You will get:
+3. You will get matplotlib plot:
 ![image](https://user-images.githubusercontent.com/48184708/147402871-0c2ba2e8-8505-4203-8688-c09a833bfe09.png)
 (analitical solutions for harmonic oscillator (F = x^2 / 2 in this case) are: E = 1.5, 3.5, 5.5, 7.5)
 Enjoy it!
