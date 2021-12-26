@@ -22,3 +22,5 @@ Quick start guide:
 (analitical solutions for harmonic oscillator (F = x^2 / 2 in this case) are: E = 1.5, 3.5, 5.5, 7.5).
 
 Enjoy it!
+
+This work was done during the quantum mechanics university course.
