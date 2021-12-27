@@ -12,3 +12,15 @@ To run this application you need to:
 To build it into desktop executable app, you need to install pyInstaller and run:
 
 python -m eel gui.py web --onefile --noconsol --i "Absolute location to icon.ico"
+
+Quick start guide:
+1. Fill all fields like in the picture:
+![image](https://user-images.githubusercontent.com/48184708/147402849-544cb7d5-b982-41f8-8a0f-a252c24ef637.png)
+2. Press "Calculate" button.
+3. You will get matplotlib plot:
+![image](https://user-images.githubusercontent.com/48184708/147402871-0c2ba2e8-8505-4203-8688-c09a833bfe09.png)
+(analitical solutions for harmonic oscillator (F = x^2 / 2 in this case) are: E = 1.5, 3.5, 5.5, 7.5).
+
+Enjoy it!
+
+This work was done during the quantum mechanics university course.
