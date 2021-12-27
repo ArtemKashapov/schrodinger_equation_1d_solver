@@ -333,7 +333,7 @@ svg circle
 svg circle:nth-child(2)
 {
     stroke: #d400d4;
-    filter: blur(2px);
+    filter: blur(4px);
     stroke-dasharray: 160;
     stroke-dashoffset: calc(160 - 160 * var(--i) / 100);
 }

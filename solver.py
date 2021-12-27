@@ -100,10 +100,13 @@ class Numerov():
         self.pot = TISE(x_min=x_min, x_max=x_max, n_point=n_point, n_sol=n_sol, e_min=self.e_min, e_max=self.e_max, de=self.de, const_b=const_b, potential=self.potential).get_pot(self.x_array)
 
         self.eps = e_min
-        self.c = np.where(self.pot >= self.eps)[0][0]
-        if self.c < 2:
-            self.c = 2
-        elif self.c > self.n_point - 2:
+        try:
+            self.c = np.where(self.pot >= self.eps)[0][0]
+            if self.c < 2:
+                self.c = 2
+            elif self.c > self.n_point - 2:
+                self.c = self.n_point - 2
+        except:
             self.c = self.n_point - 2
 
         self.small_a = 1e-5
@@ -157,7 +160,6 @@ class Numerov():
         de0 = self.de
         self.eps = self.e_min
         loss_this = self.numerov_algorithm()[1]
-        next_fake = False
 
         e_eig = []
 
@@ -175,11 +177,8 @@ class Numerov():
                     loss_prev, loss_this = loss_this, self.numerov_algorithm()[1]
                     if np.sign(loss_prev) != np.sign(loss_this):
                         de = -de / 2
-                if not next_fake:
+                if np.abs(np.abs(self.backward_relation()[1]) - np.abs(self.forward_relation()[1])) < 1.0:
                     e_eig.append(self.eps)
-                    next_fake = True
-                else:
-                    next_fake = False
                 de = de0
                 self.eps += de
                 loss_this = self.numerov_algorithm()[1]
