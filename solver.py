@@ -78,7 +78,7 @@ class TISE:
             ax2.legend()
             plt.show()
         except:
-            print('error: 2')
+            eel.show_message(0)
         
 
 # The Numerov class implements algorithm presented in the paper (check link in the top left of the gui)

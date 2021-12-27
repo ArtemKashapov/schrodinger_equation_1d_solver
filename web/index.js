@@ -48,7 +48,7 @@ function show_message(message) {
     console.log(message==0)
     if (message==0) { 
         document.getElementById('msg-box').setAttribute('class', 'message error')
-        document.getElementById('msg-text').textContent = 'No solutions found, try changing the parameters, perhaps reduce the search step dE'
+        document.getElementById('msg-text').textContent = 'No solutions found, try decreasing search step dE'
         setTimeout(() => {
             document.getElementById('msg-box').setAttribute('class', 'message')
             document.getElementById('msg-text').textContent = ''
@@ -56,6 +56,13 @@ function show_message(message) {
     } else if (message==-1) {
         document.getElementById('msg-box').setAttribute('class', 'message error')
         document.getElementById('msg-text').textContent = 'Invalid bounds for eigenvalues'
+        setTimeout(() => {
+            document.getElementById('msg-box').setAttribute('class', 'message')
+            document.getElementById('msg-text').textContent = ''
+        }, 3000);
+    } else if (message==-2) {
+        document.getElementById('msg-box').setAttribute('class', 'message error')
+        document.getElementById('msg-text').textContent = 'Check the entered parameters'
         setTimeout(() => {
             document.getElementById('msg-box').setAttribute('class', 'message')
             document.getElementById('msg-text').textContent = ''

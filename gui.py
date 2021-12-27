@@ -3,7 +3,6 @@ from solver import TISE
 
 
 eel.init('web')
-
 @eel.expose
 def run(params):
     try:
@@ -33,10 +32,10 @@ def run(params):
             tise.plot_solutions()
         else:
             eel.show_message(out_number)
-    except ValueError:
-        eel.show_message(0)
     except IndexError:
         eel.show_message(-1)
+    except ValueError:
+        eel.show_message(-2)
 
 
 eel.start('index.html')
